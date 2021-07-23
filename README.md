@@ -1,0 +1,1 @@
+Human Activity Recognition, detecting the human action using the webcam from the local server using the libraries and languages like; OpebCV, Mediapipe, Flask, Python. Performing training and testing using the LSTM (Long Short Term Memory) model.
