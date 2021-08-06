@@ -4,7 +4,7 @@ import tensorflow as tf
 
 app = Flask(__name__)
 model = tf.keras.models.load_model(
-    r'D:\Lambton\AIMT\Semester 3\AI and ML Capestone (3406)\Human_Activity_Recognition\har_app\action.h5')
+    r'action.h5')
 
 
 @app.route('/')
