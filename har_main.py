@@ -21,7 +21,6 @@ class VideoCamera(object):
 
     def __del__(self):
         self.cap.release()
-        cv2.destroyAllWindows()
 
     def prob_viz(res, actions, input_frame, colors):
         output_frame = input_frame.copy()
@@ -53,8 +52,7 @@ class VideoCamera(object):
         model.add(Dense(32, activation='relu'))
         model.add(Dense(actions.shape[0], activation='softmax'))
 
-        model.load_weights(
-            r'action.h5')
+        model.load_weights(r'action.h5')
 
         # Set Mediapipe Model
         with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
@@ -105,11 +103,9 @@ class VideoCamera(object):
                     break
 
             self.cap.release()
-            cv2.destroyAllWindows()
 
     def clseWeb(self):
         self.cap.release()
-        cv2.destroyAllWindows()
 
 if __name__ == "__main__":
     VideoCamera().gen_frame()
