@@ -30,3 +30,6 @@ def video_feed():
 def close_feed():
     resp = Response(gen(VideoCamera().clseWeb()), mimetype='multipart/x-mixed-replace; boundary=frame')
     return render_template('index.html', resp=resp)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')
