@@ -54,7 +54,7 @@ class VideoCamera(object):
         model.add(Dense(actions.shape[0], activation='softmax'))
 
         model.load_weights(
-            r'D:\Lambton\AIMT\Semester 3\AI and ML Capestone (3406)\Human_Activity_Recognition\har_app\action.h5')
+            r'action.h5')
 
         # Set Mediapipe Model
         with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
