@@ -21,7 +21,7 @@ class VideoCamera(object):
 
     def __del__(self):
         self.cap.release()
-        #cv2.destroyAllWindows()
+        cv2.destroyAllWindows()
 
     def prob_viz(res, actions, input_frame, colors):
         output_frame = input_frame.copy()
@@ -104,11 +104,11 @@ class VideoCamera(object):
                     break
 
             self.cap.release()
-            #cv2.destroyAllWindows()
+            cv2.destroyAllWindows()
 
     def clseWeb(self):
         self.cap.release()
-        #cv2.destroyAllWindows()
+        cv2.destroyAllWindows()
 
 if __name__ == "__main__":
     VideoCamera().gen_frame()
