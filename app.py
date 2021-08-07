@@ -11,6 +11,10 @@ model = tf.keras.models.load_model(
 def home():
     return render_template('index.html')
 
+@app.route('/index')
+def index():
+    return render_template('index.html')
+
 
 def gen(camera):
     while True:
@@ -30,6 +34,10 @@ def video_feed():
 def close_feed():
     resp = Response(gen(VideoCamera().clseWeb()), mimetype='multipart/x-mixed-replace; boundary=frame')
     return render_template('index.html', resp=resp)
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
