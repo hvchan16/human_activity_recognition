@@ -39,5 +39,10 @@ def close_feed():
 def about():
     return render_template('about.html')
 
+@app.route('/working')
+def working():
+    return render_template('working.html')
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
