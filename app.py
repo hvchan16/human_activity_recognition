@@ -27,7 +27,8 @@ def gen(camera):
 @app.route('/video_feed', methods=['POST'])
 def video_feed():
     resp = Response(gen(VideoCamera().gen_frame()), mimetype='multipart/x-mixed-replace; boundary=frame')
-    return render_template('index.html', resp=resp)
+#     return render_template('index.html', resp=resp)
+    return resp
 
 
 @app.route('/close_feed', methods=['POST', 'GET'])
